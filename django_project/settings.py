@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'polls.apps.PollsConfig',
     'wakawaka.apps.wakawakaConfig',
+    'djf_surveys.apps.DjfSurveysConfig',
+    'schedule.apps.ScheduleConfig',
     'crispy_forms',
     'crispy_bootstrap4',
     'django.contrib.admin',
@@ -47,6 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
+
 ]
 
 MIDDLEWARE = [
@@ -73,6 +76,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'djf_surveys.context_processors.surveys_context'
             ],
         },
     },

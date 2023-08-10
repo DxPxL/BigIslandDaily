@@ -16,6 +16,8 @@ from django.http import (
 )
 from django.shortcuts import get_object_or_404, render
 from django.urls import reverse
+from django.utils.translation import gettext
+from django.utils.translation import gettext_lazy as _
 
 
 from wakawaka.forms import DeleteWikiPageForm, WikiPageForm
@@ -26,7 +28,7 @@ def wiki_index(request: HttpRequest) -> HttpResponseRedirect:
     """
     Redirects to the default wiki index name.
     """
-    kwargs = {"slug": getattr(settings, "WAKAWAKA_DEFAULT_INDEX", "WikiIndex")}
+    kwargs = {"slug": getattr(settings, "WAKAWAKA_DEFAULT_INDEX", "FoodHub")}
     redirect_to = reverse("wakawaka_page", kwargs=kwargs)
     return HttpResponseRedirect(redirect_to)
 

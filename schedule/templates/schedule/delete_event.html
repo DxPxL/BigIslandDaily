@@ -1,0 +1,13 @@
+{% extends 'blog/base.html' %}
+{% load crispy_forms_tags %}
+{% block content %}
+{% load i18n %}
+
+<h1>{% trans "Delete" %}</h1>
+{% trans "Are you sure that you really want to delete it?" %}
+
+<form action="" method="post">{% csrf_token %}
+    <input type="submit" value="Confirm">
+    <input type="submit" name="cancel" value="Cancel">
+</form>
+{% endblock %}

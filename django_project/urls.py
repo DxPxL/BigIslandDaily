@@ -22,6 +22,7 @@ from django.conf.urls.static import static
 from users import views as users_views
 from polls import views as polls_views
 from wakawaka import views as wakawaka_views
+from djf_surveys import views as djf_surveys_views
 
 
 urlpatterns = [
@@ -49,6 +50,12 @@ urlpatterns = [
 
 
     path(r'^wiki/', include('wakawaka.urls'), name='wakawaka'),
+
+    path('calendar/', include('schedule.urls')),
+    path('survey/', include('djf_surveys.urls')),
+    path('survey/', djf_surveys_views.SurveyListView.as_view() , name='mySurveyList'),
+
+
 ]
 
 if settings.DEBUG:

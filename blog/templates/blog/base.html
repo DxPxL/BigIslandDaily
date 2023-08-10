@@ -8,6 +8,7 @@
         <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'blog/style.css' %}">
 
+
         <title>Big Island Daily</title>
     </head>
   <body>
@@ -21,7 +22,8 @@
                 <img class="img-fluid" width="40" src="{% static 'blog/logo.png' %}">
               <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
               <a class="nav-item nav-link" href="{% url 'myPollsList' %}">Votes</a>
-
+              <a class="nav-item nav-link" href="{% url 'calendar_list' %}">Calendar</a>
+              <a class="nav-item nav-link" href="{% url 'mySurveyList' %}">Survey</a>
               <a class="nav-item nav-link" href="{% url 'wakawaka_index' %}">Wiki</a>
               <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
             </div>
